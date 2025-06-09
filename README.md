@@ -63,6 +63,8 @@ cd build
 cmake ..
 make -j$(nproc)
 ```
+this force CMake to build folder without flags
+
 -------------------
 Now you should be able to run examples code [here](https://github.com/ArduCAM/Arducam_tof_camera)
 
