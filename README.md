@@ -86,9 +86,15 @@ catkin_create_pkg arducam_tof_ros1 rospy
 cd ..
 catkin build
 ```
-Step 3: Run the code
+Step 3: You may need to run this for swapping between python2 and python3:
 ```bash
-rosrun arducam_tof_ros1 tof_pointcloud.py
+catkin config --cmake-args-DPYTHON_EXECUTABLE=/usr/bin/python3.6 -DPYTHON_LIBRARY=/usr/lib/aarch64-linux-gnu/libpython3.6m.so
+```
+see more [here](https://medium.com/@beta_b0t/how-to-setup-ros-with-python-3-44a69ca36674) 
+
+Step 4: Run the code
+```bash
+rosrun arducam_tof_ros1 tof_python2.py
 ```
 Open RViz with:
 ```bash
