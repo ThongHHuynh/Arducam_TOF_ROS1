@@ -45,9 +45,13 @@ Step 4: Complile
 ```
 Step 5:
 There could be the error:
-"Build repo not found or not exist" /n
-"Unknown argument -j"/n
-"Unknown argument 4"/n
+
+"Build repo not found or not exist" 
+
+"Unknown argument -j"
+
+"Unknown argument 4"
+
 these are because Cmake 3.10.x on Ubuntu 18.04 is not compatible with -B, -S flags in the compile file. 
 
 To fix:
@@ -66,6 +70,7 @@ Now you should be able to run examples code [here](https://github.com/ArduCAM/Ar
 ROS1 FOR TOF CAM:
 ---------
 The Arducam code was made for ROS2, you can find the ROS1 compatible code [here](tof_python2.py)
+
 Step 1: Replace the given file in the downloaded repo 
 ```bash
 ros2_publisher/src/arducam/arducam_rclpy_tof_pointcloud/arducam_rclpy_tof_pointcloud/tof_pointcloud.py
