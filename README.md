@@ -2,14 +2,16 @@
 
 This repo contains installation instruction for Arducam TOF B0410C on a Jetson Nano 
 
-#SYSTEM INFO
+SYSTEM INFO
+---------
 
 - Ubuntu 18.04
 - Jetson Nano
 - ROS 1 Melodic
 - Python2
-  
-#INSTALLATION STEPS
+
+INSTALLATION STEPS
+---------
 
 Step 1: Clone this repo
 ```bash
@@ -62,6 +64,7 @@ Now you should be able to run examples code [here](https://github.com/ArduCAM/Ar
 
 -------------------
 ROS1 FOR TOF CAM:
+---------
 The Arducam code was made for ROS2, you can find the ROS1 compatible code [here](tof_python2.py)
 Step 1: Replace the given file in the downloaded repo 
 ```bash
@@ -84,7 +87,7 @@ Open RViz with:
 ```bash
 rosrun rviz rviz
 ```
-Subscribe to pointcloud topic, you should see pointcloud images.
+Subscribe to pointcloud topic, you should see pointcloud images now.
 ------------------------------
 
 
