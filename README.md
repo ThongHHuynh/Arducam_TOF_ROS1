@@ -44,7 +44,7 @@ Step 4: Complile
   ./compile.sh
 ```
 Step 5:
-There could be the error:
+There could be errors:
 
 "Build repo not found or not exist" 
 
