@@ -78,6 +78,7 @@ Step 1: Replace the given file in the downloaded repo
 ros2_publisher/src/arducam/arducam_rclpy_tof_pointcloud/arducam_rclpy_tof_pointcloud/tof_pointcloud.py
 ```
 with the new source code. 
+
 Step 2: 
 Create and rebuild the package:
 ```bash
