@@ -8,7 +8,7 @@ This repo contains installation instruction for Arducam TOF B0410C on a Jetson N
 - Jetson Nano
 - ROS 1 Melodic
 - Python2
-- 
+  
 #INSTALLATION STEPS
 
 Step 1: Clone this repo
@@ -60,9 +60,32 @@ make -j$(nproc)
 -------------------
 Now you should be able to run examples code [here](https://github.com/ArduCAM/Arducam_tof_camera)
 
-
-Step 6: 
+-------------------
+ROS1 FOR TOF CAM:
 The Arducam code was made for ROS2, you can find the ROS1 compatible code [here](tof_python2.py)
+Step 1: Replace the given file in the downloaded repo 
+```bash
+ros2_publisher/src/arducam/arducam_rclpy_tof_pointcloud/arducam_rclpy_tof_pointcloud/tof_pointcloud.py
+```
+with the new source code. 
+Step 2: 
+Create and rebuild the package:
+```bash
+cd ~/Arducam_tof_camera/src
+catkin_create_pkg arducam_tof_ros1 rospy
+cd ..
+catkin build
+```
+Step 3: Run the code
+```bash
+rosrun arducam_tof_ros1 tof_pointcloud.py
+```
+Open RViz with:
+```bash
+rosrun rviz rviz
+```
+Subscribe to pointcloud topic, you should see pointcloud images.
+------------------------------
 
 
 
