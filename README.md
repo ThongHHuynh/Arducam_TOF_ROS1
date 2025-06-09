@@ -41,6 +41,28 @@ Step 4: Complile
 ```bash
   ./compile.sh
 ```
+Step 5:
+There could be the error:
+"Build repo not found or not exist" 
+"Unknown argument -j"
+"Unknown argument 4"
+these are because Cmake 3.10.x on Ubuntu 18.04 is not compatible with -B, -S flags in the compile file. 
+
+To fix:
+```bash
+cd ~/Arducam_tof_camera
+rm -rf CMakeFiles CMakeCache.txt Makefile cmake_install.cmake build
+mkdir build
+cd build
+cmake ..
+make -j$(nproc)
+```
+-------------------
+Now you should be able to run examples code [here](https://github.com/ArduCAM/Arducam_tof_camera)
+
+
+Step 6: 
+The Arducam code was made for ROS2, you can find the ROS1 compatible code [here](tof_python2.py)
 
 
 
